@@ -15,7 +15,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    bool cBool = true;
+    BOOL myBool = YES;
+    NSLog(@"cBool: %d myBool: %d", cBool, myBool);
+    
+    cBool = false;
+    myBool = NO;
+    NSLog(@"cBool: %d, myBool: %d", cBool, myBool);
+    
+    cBool = 25;
+    myBool = 25; // On 32 bit OS, this returns 25, instead of 1
+    NSLog(@"cBool: %d, myBool: %d", cBool, myBool);
+
+    if (cBool) {
+        NSLog(@"cBool is true");
+    }
+    if(myBool) {
+        NSLog(@"myBool is true");
+    }
+    
     return YES;
 }
 
